@@ -2,6 +2,7 @@
     "name": "tictactoe",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://rcsuax.github.io/tictactoe/",
     "dependencies": {
         "react": "^15.5.4",
         "react-dom": "^15.5.4"
@@ -17,7 +18,6 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "homepage": "https://rcsuax.github.io/tictactoe/"
+        "eject": "react-scripts eject"
     }
 }
