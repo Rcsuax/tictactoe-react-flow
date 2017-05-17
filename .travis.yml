@@ -11,7 +11,8 @@ script:
 
 before_deploy:
   - sed -i "/\/build/d" .gitignore
-  
+  - bash deploy.sh
+
 deploy:
   provider: pages
   skip_cleanup: true
