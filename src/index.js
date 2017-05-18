@@ -10,10 +10,10 @@ type SquareProp = {
 }
 
 type History = {
-    squares : Array<Square>
+    squares : Array<string>
 }
 
-function Square(props : SquareProp) {
+function Square(props): React$Element<any> {
     return (
         <button className="square" onClick={props.onClick}>
             {props.value}
@@ -82,17 +82,14 @@ class Board extends React.Component {
 }
 
 
-class Game extends React.Component{
+class Game extends React.Component {
 
-    State: {
+    state: {
         history: Array<History>,
         stepNumber: number,
         xIsNext: boolean
-    }
-
-    constructor() {
-        super();
-        this.state = {
+    } =
+         {
             history: [
                 {
                     squares: Array(9).fill('')
@@ -101,13 +98,13 @@ class Game extends React.Component{
             stepNumber: 0,
             xIsNext: true,
         }
-    }
+
 
     handleClick(i : number): void {
-      const history : Array<Square> = this.state.history.slice(0, this.state.stepNumber + 1);
+      const history : Array<History> = this.state.history.slice(0, this.state.stepNumber + 1);
       const current = history[this.state.stepNumber];
       const squares = current.squares.slice();
-      
+
       if (calculateWinner(squares) || squares[i]) {
         return;
       }
