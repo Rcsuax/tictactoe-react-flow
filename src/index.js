@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 type SquareProp = {
-    value : String,
+    value : string,
     onClick() : void
 }
 
@@ -13,7 +13,7 @@ type History = {
     squares : Array<string>
 }
 
-function Square(props): React$Element<any> {
+function Square(props : SquareProp): React$Element<any> {
     return (
         <button className="square" onClick={props.onClick}>
             {props.value}
