@@ -44,6 +44,12 @@ function calculateWinner(squares : Array<string>): string {
 }
 
 class Board extends React.Component {
+
+    props: {
+      squares: Array<string>;
+      onClick: (index: number) => void;
+    };
+
     renderSquare(index : number) : Square {
         return (
             <Square
@@ -88,8 +94,7 @@ class Game extends React.Component {
         history: Array<History>,
         stepNumber: number,
         xIsNext: boolean
-    } =
-         {
+    } = {
             history: [
                 {
                     squares: Array(9).fill('')
